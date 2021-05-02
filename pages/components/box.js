@@ -27,6 +27,31 @@ const Label = styled.h2`
 const ContentContainer = styled.div`
   background-color: var(--color-box);
   aspect-ratio: ${props => props.aspectRatio || 'auto'};
+
+  @supports not (aspect-ratio: 1 / 1) {
+    &::before {
+      float: left;
+      content: '';
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+
+  @supports not (aspect-ratio: 4 / 3) {
+    &::before {
+      padding-top: 75%;
+    }
+  }
+
+  @supports not (aspect-ratio: 16 / 9) {
+    &::before {
+      padding-top: 56.25%;
+    }
+  }
 `
 
 export default function Box(props) {

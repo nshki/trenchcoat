@@ -33,7 +33,7 @@ export default function Chat() {
       color: tags['color']
     }
 
-    setMessages([newMessage, latestMessages])
+    setMessages([newMessage, ...latestMessages])
   })
 
   return(

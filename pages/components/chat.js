@@ -23,7 +23,7 @@ const User = styled.span`
 `
 
 export default function Chat() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([])
 
   client.on('message', (channel, tags, message, self) => {
     let latestMessages = messages.slice(0, 10)

@@ -30,8 +30,8 @@ const ContentContainer = styled.div`
 `
 
 export default function Box(props) {
-  const Icon = props.icon;
-  const Content = props.content;
+  const Icon = props.icon
+  const Content = props.content
 
   return (
     <Container main={props.main}>

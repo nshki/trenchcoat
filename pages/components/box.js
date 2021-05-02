@@ -4,11 +4,14 @@ const Container = styled.div`
   background-color: var(--color-box);
   box-shadow: var(--shadow-box);
   border-top: 4px solid;
-  overflow: hidden;
   animation: 15s color-borders infinite;
 
   ${props => props.main && `
     grid-area: 1 / 2 / span 2 / span 1;
+  `}
+
+  ${props => props.chat && `
+    overflow: hidden;
   `}
 `
 
@@ -39,18 +42,18 @@ const ContentContainer = styled.div`
       content: '';
       clear: both;
     }
-  }
 
-  @supports not (aspect-ratio: 4 / 3) {
-    &::before {
-      padding-top: 75%;
-    }
-  }
+    ${props => props.aspectRatio === '4 / 3' && `
+      &::before {
+        padding-top: 75%;
+      }
+    `}
 
-  @supports not (aspect-ratio: 16 / 9) {
-    &::before {
-      padding-top: 56.25%;
-    }
+    ${props => props.aspectRatio === '16 / 9' && `
+      &::before {
+        padding-top: 56.25%;
+      }
+    `}
   }
 `
 

@@ -15,9 +15,9 @@ export default function Home() {
       <GlobalStyle />
 
       <Grid>
-        <Box label="Gameplay" icon={FaGamepad} main aspectRatio="16 / 9" />
         <Box label="Streamer" icon={FaVideo} aspectRatio="4 / 3" />
-        <Box label="Chat" content={Chat} icon={BsChatSquareDotsFill} />
+        <Box label="Chat" content={Chat} chat icon={BsChatSquareDotsFill} />
+        <Box label="Gameplay" icon={FaGamepad} main aspectRatio="16 / 9" />
       </Grid>
     </>
   )

@@ -38,10 +38,11 @@ const GlobalStyle = createGlobalStyle`
 
 const Grid = styled.div`
   min-height: 100vh;
+  max-height: 100vh;
   padding: 1rem;
   aspect-ratio: 16 / 9;
   display: grid;
-  grid-template: 1fr 2fr / 1fr 3fr;
+  grid-template: auto 1fr / 1fr 3fr;
   gap: 1rem;
 `
 

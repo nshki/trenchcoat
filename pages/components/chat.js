@@ -10,11 +10,13 @@ const Messages = styled.ul`
   height: 100%;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
 `
 
 const Message = styled.li`
-  padding: 1rem;
+  & + & {
+    margin-top: 1rem;
+  }
 `
 
 const User = styled.span`

@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Trenchcoat</title>
+        <link href="https://rsms.me/inter/inter.css" rel="stylesheet" />
       </Head>
 
       <GlobalStyle />

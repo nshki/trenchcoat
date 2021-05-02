@@ -20,11 +20,19 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    font-family: 'Inter', sans-serif;
+
+    @supports (font-variation-settings: normal) {
+      font-family: 'Inter var', sans-serif;
+    }
+  }
+
   body {
     background-color: var(--color-background);
     margin: 0;
     color: var(--color-text);
-    font-family: sans-serif;
+    line-height: 1.4;
   }
 
   @keyframes color-borders {

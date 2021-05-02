@@ -6,11 +6,11 @@ const Container = styled.div`
   border-top: 4px solid;
   animation: 15s color-borders infinite;
 
-  ${props => props.main && `
+  ${props => props.role === 'main' && `
     grid-area: 1 / 2 / span 2 / span 1;
   `}
 
-  ${props => props.chat && `
+  ${props => props.role === 'chat' && `
     overflow: hidden;
   `}
 `
@@ -62,7 +62,7 @@ export default function Box(props) {
   const Content = props.content
 
   return (
-    <Container main={props.main}>
+    <Container role={props.role}>
       <Label>
         {props.label}
         {Icon && <Icon />}

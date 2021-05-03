@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   background-color: var(--color-box);
+  display: flex;
+  flex-direction: column;
   box-shadow: var(--shadow-box);
   border-top: 4px solid;
   animation: 15s color-borders infinite;
@@ -60,6 +62,7 @@ const ContentContainer = styled.div`
 export default function Box(props) {
   const Icon = props.icon
   const Content = props.content
+  const ExtraContent = props.extraContent
 
   return (
     <Container role={props.role}>
@@ -71,6 +74,8 @@ export default function Box(props) {
       <ContentContainer aspectRatio={props.aspectRatio}>
         {Content && <Content />}
       </ContentContainer>
+
+      {ExtraContent && <ExtraContent />}
     </Container>
   )
 }

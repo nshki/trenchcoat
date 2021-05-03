@@ -10,7 +10,9 @@ Trenchcoat is a React application that provides a Twitch overlay, chat, and stre
 Create a new file called `.env.local` with the following contents:
 
 ```
-NEXT_PUBLIC_CHANNEL=<Twitch channel name>
+NEXT_PUBLIC_CHANNEL="<Your Twitch username here>"
+NEXT_PUBLIC_DISCORD="<Your Discord link here>"
+NEXT_PUBLIC_TWITTER="<Your Twitter handle here>"
 ```
 
 Then run:
